@@ -10,6 +10,7 @@ import { ContactPopup } from "@/components/contact-popup"
 import { EnhancedFooter } from "@/components/enhanced-footer"
 import { TrainingCard } from "@/components/training-card"
 import { motion, AnimatePresence } from "framer-motion"
+import HeroGeometric from "@/components/hero-geometric"
 
 export default function Home() {
   const [expandedFaq, setExpandedFaq] = useState<string | null>(null)
@@ -113,6 +114,7 @@ export default function Home() {
           </div>
         </div>
       </header>
+      {/* <HeroGeometric /> */}
 
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-10 md:py-16 text-center relative z-0">

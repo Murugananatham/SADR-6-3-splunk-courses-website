@@ -250,7 +250,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Free Learning Track Section */}
+      {/* Free Learning Track Section
       <section
         id="free-learning-track"
         ref={learningTrackRef}
@@ -302,7 +302,7 @@ export default function Home() {
             )}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Roadmap Helping Resources Section */}
       <section
@@ -318,19 +318,30 @@ export default function Home() {
               icon={<Server className="h-10 w-10 text-primary" />}
               title="Splunk Standalone Server Setup"
               description="Step-by-step guide to set up your own Splunk server environment for practice."
-              expandedContent="This comprehensive guide walks you through the entire process of setting up a Splunk standalone server. You'll learn how to download and install Splunk, configure initial settings, set up inputs, and verify your installation. Perfect for beginners who want to create their own test environment."
+              expandedContent="Free Splunk Standalone Lab Setup – BOTSv3 Data Included!
+
+              Get hands-on experience with Splunk by setting up your own Standalone Lab—completely free! This setup includes:
+              ✅ Pre-configured Splunk Instance
+              ✅ BOTSv3 Security Dataset (Real-world logs for threat hunting)
+              ✅ Supporting Add-ons for seamless data ingestion
+              ✅ Step-by-Step Guidance to help you get started"
               tag="Free"
               isPaid={false}
               accessType="form"
-              accessLink="https://forms.softmania.com/splunk-server-setup"
+              accessLink="https://sales.softmania.in/bookings/splunk-standalone-lab-setup"
               formFields={["Name", "Email", "Company", "Experience Level", "Primary Use Case"]}
             />
 
             <ResourceCard
               icon={<Code className="h-10 w-10 text-primary" />}
-              title="Essential Splunk Admin Commands"
-              description="Comprehensive list of must-know Splunk administrative commands with examples."
-              expandedContent="Master the essential Splunk administrative commands that every Splunk professional should know. This resource includes detailed explanations, syntax examples, and use cases for each command. You'll learn how to manage indexes, monitor Splunk health, and troubleshoot common issues."
+              title="Splunk Distributed (Non-clustered) Environment Setup"
+              description="Coming Soon..."
+              expandedContent="
+              Search head -1
+              Indexer -1
+              Heavy Forwarder -1
+              Universal Forwarder -1
+              "
               tag="Free"
               isPaid={false}
               accessType="form"
@@ -339,10 +350,12 @@ export default function Home() {
             />
 
             <ResourceCard
-              icon={<Award className="h-10 w-10 text-[#FFD700]" />}
-              title="Advanced Splunk Query Mastery"
-              description="Advanced techniques for creating powerful, optimized Splunk queries for complex data analysis."
-              expandedContent="Take your Splunk search skills to expert level with our advanced query mastery guide. Learn sophisticated techniques like subsearches, transactions, lookups, and statistical commands. This premium resource includes downloadable examples, performance optimization tips, and real-world scenarios that will transform you into a Splunk search wizard."
+              icon={<Code className="h-10 w-10 text-[#FFD700]" />}
+              title="Distributed Clustered Environment"
+              description="A Distributed Clustered Environment in Splunk enables scalability and high availability."
+              expandedContent="Search Head Cluster (SHC): A group of 3 search heads that work together to distribute search queries and results, ensuring load balancing and failover.
+
+Indexer Cluster: A cluster of 3 indexers that store, replicate, and manage incoming data to provide redundancy and fault tolerance."
               tag="Paid"
               isPaid={true}
               accessType="booking"
@@ -443,7 +456,7 @@ export default function Home() {
               </div>
             </div>
 
-            <SecondaryCoursesSection />
+            {/* <SecondaryCoursesSection /> */}
           </div>
         </div>
       </section>
@@ -461,7 +474,7 @@ export default function Home() {
       </section>
 
         {/* Footer */}
-        <footer className="bg-gray-900 text-gray-300 py-12">
+      <footer className="bg-gray-900 text-gray-300 py-12">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
@@ -474,23 +487,18 @@ export default function Home() {
               <h3 className="text-white font-bold text-lg mb-4">Quick Links</h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Home
+                  <Link href="#course-details" className="hover:text-white transition-colors">
+                    Course Details
                   </Link>
                 </li>
                 <li>
-                  <Link href="#free-learning-track" className="hover:text-white transition-colors">
-                    Free learning track
+                  <Link href="#syllabus" className="hover:text-white transition-colors">
+                    Syllabus
                   </Link>
                 </li>
                 <li>
-                  <Link href="#roadmap-resources" className="hover:text-white transition-colors">
-                      Roadmap resources
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#course-options" className="hover:text-white transition-colors">
-                    One-to-one
+                  <Link href="#roadmap" className="hover:text-white transition-colors">
+                    Learning Roadmap
                   </Link>
                 </li>
                 <li>
@@ -509,13 +517,13 @@ export default function Home() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="tel:+91 9750962781" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                    Phone: +91 9750962781
+                  <Link href="tel:+91 8317349618" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                    Phone: +91 8317349618
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://wa.me/9750962781" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                    WhatsApp: +91 9750962781
+                  <Link href="https://wa.me/918317349618" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                    WhatsApp: +91 8317349618
                   </Link>
                 </li>
               </ul>

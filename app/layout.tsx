@@ -10,7 +10,6 @@ export const metadata = {
   description:
     "Master Splunk with our expert training programs. Choose from real-time learning, interview prep, certification paths & more!",
   keywords: "Splunk training, Splunk certification, Splunk admin, Splunk developer, Splunk courses",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({

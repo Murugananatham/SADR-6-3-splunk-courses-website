@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react"
 import { createPortal } from "react-dom" // Import React Portal
-import { X, MessageSquare, Globe, BookOpen } from "lucide-react"
+import { X, MessageSquare, Globe, BookOpen, Mail } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
 
@@ -89,7 +89,7 @@ export function ContactPopup() {
                           hover:border-green-200 dark:hover:border-green-800 transition-all duration-300 hover:shadow-md"
                       >
                         <a
-                          href="https://whatsapp.com/channel/example"
+                          href="https://chat.whatsapp.com/JLYXjK4mk4ZIItrJljFNqp"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex items-center gap-4 text-gray-800 dark:text-white hover:text-green-600 dark:hover:text-green-400 transition-colors duration-300"
@@ -99,7 +99,55 @@ export function ContactPopup() {
                           </div>
                           <div>
                             <h3 className="font-semibold text-lg">Join WhatsApp Group</h3>
-                            <p className="text-gray-600 dark:text-gray-300">Get updates and connect with other learners</p>
+                            <p className="text-gray-600 dark:text-gray-300">https://chat.whatsapp.com/JLYXjK4mk4ZIItrJljFNqp</p>
+                          </div>
+                        </a>
+                      </motion.div>
+
+                      {/* Mail */}
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2 }}
+                        className="bg-white dark:bg-gray-800/50 p-5 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm 
+                          hover:border-green-200 dark:hover:border-green-800 transition-all duration-300 hover:shadow-md"
+                      >
+                        <a
+                          href="mailto:info@softmania.in"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-4 text-gray-800 dark:text-white hover:text-green-600 dark:hover:text-green-400 transition-colors duration-300"
+                        >
+                          <div className="w-12 h-12 bg-green-100 dark:bg-green-900/40 rounded-full flex items-center justify-center">
+                            <Mail className="h-6 w-6 text-green-600 dark:text-green-400" />
+                          </div>
+                          <div>
+                            <h3 className="font-semibold text-lg">Email</h3>
+                            <p className="text-gray-600 dark:text-gray-300">info@softmania.in</p>
+                          </div>
+                        </a>
+                      </motion.div>
+
+                      {/* Whatsapp */}
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2 }}
+                        className="bg-white dark:bg-gray-800/50 p-5 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm 
+                          hover:border-green-200 dark:hover:border-green-800 transition-all duration-300 hover:shadow-md"
+                      >
+                        <a
+                          href="https://wa.me/918317349618"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-4 text-gray-800 dark:text-white hover:text-green-600 dark:hover:text-green-400 transition-colors duration-300"
+                        >
+                          <div className="w-12 h-12 bg-green-100 dark:bg-green-900/40 rounded-full flex items-center justify-center">
+                            <MessageSquare className="h-6 w-6 text-green-600 dark:text-green-400" />
+                          </div>
+                          <div>
+                            <h3 className="font-semibold text-lg">Whatsapp</h3>
+                            <p className="text-gray-600 dark:text-gray-300">+91 8317349618</p>
                           </div>
                         </a>
                       </motion.div>
@@ -113,7 +161,7 @@ export function ContactPopup() {
                           hover:border-green-200 dark:hover:border-green-800 transition-all duration-300 hover:shadow-md"
                       >
                         <a
-                          href="https://softmania.com"
+                          href="https://www.softmania.in/"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex items-center gap-4 text-gray-800 dark:text-white hover:text-green-600 dark:hover:text-green-400 transition-colors duration-300"
@@ -123,7 +171,7 @@ export function ContactPopup() {
                           </div>
                           <div>
                             <h3 className="font-semibold text-lg">Corporate Website</h3>
-                            <p className="text-gray-600 dark:text-gray-300">Visit our main website for more information</p>
+                            <p className="text-gray-600 dark:text-gray-300">https://www.softmania.in</p>
                           </div>
                         </a>
                       </motion.div>
