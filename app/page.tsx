@@ -10,7 +10,7 @@ import { ContactPopup } from "@/components/contact-popup"
 import { EnhancedFooter } from "@/components/enhanced-footer"
 import { TrainingCard } from "@/components/training-card"
 import { motion, AnimatePresence } from "framer-motion"
-import HeroGeometric from "@/components/hero-geometric"
+import Link from "next/link"
 
 export default function Home() {
   const [expandedFaq, setExpandedFaq] = useState<string | null>(null)
@@ -99,6 +99,7 @@ export default function Home() {
   
   return (
     <main className="min-h-screen bg-gradient-to-b from-white to-green-50 dark:from-gray-900 dark:to-gray-800 relative overflow-hidden transition-colors duration-300">
+      
       {/* Animated background effect */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_calc(50%+var(--mouse-x,0)*30%)_calc(50%+var(--mouse-y,0)*30%),rgba(16,185,129,0.1)_0%,transparent_60%)] dark:bg-[radial-gradient(circle_at_calc(50%+var(--mouse-x,0)*30%)_calc(50%+var(--mouse-y,0)*30%),rgba(16,185,129,0.15)_0%,transparent_60%)] pointer-events-none"></div>
 
@@ -106,7 +107,9 @@ export default function Home() {
       <header className="border-b border-gray-200 dark:border-gray-700 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm sticky top-0 z-10 transition-colors duration-300">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
+          <Link href="/" className="hover:text-white transition-colors">
             <h1 className="text-xl md:text-2xl font-bold text-gray-800 dark:text-white"><span className="text-green-600">Soft</span><span className="light:text-black"> Mania</span></h1>
+          </Link>
           </div>
           <div className="flex items-center gap-3">
             <ThemeToggle />
@@ -114,7 +117,6 @@ export default function Home() {
           </div>
         </div>
       </header>
-      {/* <HeroGeometric /> */}
 
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-10 md:py-16 text-center relative z-0">

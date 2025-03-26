@@ -9,10 +9,11 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Separator } from "@/components/ui/separator"
 import type { ReactNode } from "react"
 
-interface ResourceCardProps {
+interface NonClusteredCardProps {
   icon: ReactNode
   title: string
   description: string
+
   tag: string
   isPaid: boolean
   accessType: "form" | "booking"
@@ -24,16 +25,17 @@ interface ResourceCardProps {
   }
 }
 
-export function ResourceCard({
+export function NonClusteredCard({
   icon,
   title,
   description,
+
   tag,
   isPaid,
   accessType,
   accessLink,
 
-}: ResourceCardProps) {
+}: NonClusteredCardProps) {
   const [isExpanded, setIsExpanded] = useState(false)
 
   return (
@@ -92,13 +94,14 @@ export function ResourceCard({
             }`}
           >
             <div className="border-t pt-4 space-y-4">
-              <p className="text-muted-foreground leading-relaxed">Free Splunk Standalone Lab Setup – <b>BOTSv3 Data</b> Included! <br></br><br />
-✅ Pre-configured Splunk Instance. <br />
-✅ BOTSv3 Security Dataset (Real-world logs for threat hunting). <br />
-✅ Supporting Add-ons for seamless data ingestion. <br />
-✅ Step-by-Step Guidance to help you get started.</p>
+              <p className="text-muted-foreground leading-relaxed">
+              Search head -1 <br />
+              Indexer -1 <br />
+              Heavy Forwarder -1 <br />
+              Universal Forwarder -1 <br />
+              </p>
 
-              <div className="pt-1">
+              <div className="pt-2">
                
                 <Button
                   className={`w-full ${

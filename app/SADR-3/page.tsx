@@ -18,9 +18,9 @@ export default function Home() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col">
-       {/* Animated background effect */}
-       <div className="absolute inset-0 bg-[radial-gradient(circle_at_calc(50%+var(--mouse-x,0)*30%)_calc(50%+var(--mouse-y,0)*30%),rgba(16,185,129,0.1)_0%,transparent_60%)] dark:bg-[radial-gradient(circle_at_calc(50%+var(--mouse-x,0)*30%)_calc(50%+var(--mouse-y,0)*30%),rgba(16,185,129,0.15)_0%,transparent_60%)] pointer-events-none"></div>
+    <div className="min-h-screen bg-gradient-to-b from-white to-green-50 dark:from-gray-700 dark:to-gray-700 relative overflow-hidden transition-colors duration-300 flex min-h-screen flex-col">
+      {/* Animated background effect */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_calc(50%+var(--mouse-x,0)*30%)_calc(50%+var(--mouse-y,0)*30%),rgba(16,185,129,0.1)_0%,transparent_60%)] dark:bg-[radial-gradient(circle_at_calc(50%+var(--mouse-x,0)*30%)_calc(50%+var(--mouse-y,0)*30%),rgba(16,185,129,0.15)_0%,transparent_60%)] pointer-events-none"></div>
 
       {/* Header */}
       <header className="border-b border-gray-200 dark:border-gray-700 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm sticky top-0 z-10 transition-colors duration-300">
@@ -43,8 +43,8 @@ export default function Home() {
 
           {/* Back to course */}
           <div className="container mx-auto px-1">
-            <div className="mb-10">
-              <Link href="/" className="inline-flex items-center text-primary hover:text-primary/50 transition-colors">
+            <div className="mb-10 dark:text-white tracking-tight">
+              <Link href="/" className="inline-flex items-center text-primary dark:text-white hover:text-primary/50 transition-colors">
                 <ChevronLeft className="h-4 w-4 mr-1" />
                 <Button variant="outline">
                 Back to Learning Paths
@@ -58,22 +58,22 @@ export default function Home() {
 
             <div className="inline-flex items-center bg-white px-4 py-2 rounded-full shadow-md">
               <Rocket className="h-4 w-4 text-green-700 mr-2" />
-              <span className="text-md font-medium text-yellow-700">Batch starts from April 7</span>
+              <span className="text-md font-medium text-yellow-700 dark:text-black tracking-tight">Batch starts from April 7</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 mt-10 mb-14">
               Splunk Admin + Development
-              <span className="block text-green-700">(Fast Track) - 3 Months</span>
+              <span className="block text-green-700 dark:text-green-500 tracking-tight">(Fast Track) - 3 Months</span>
             </h1>
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <a href="https://chat.whatsapp.com/I5MJEOAfg8z4gquQnHRHUj" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-green-600 hover:bg-green-700">
+                <Button size="lg" className="bg-green-600 hover:bg-green-700 dark:text-white tracking-tight">
                   <MessageSquare className="mr-2 h-5 w-5" />
                   Join WhatsApp Group
                 </Button>
               </a>
               <a href="https://drive.softmania.in/external/7b4bfcac344af772b67c4fc443c8d80fc1f78186037091f84874288b6afec737" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" variant="outline" className="border-blue-600 text-blue-800 hover:bg-green-50 hover:border-green-600">
+                <Button size="lg" variant="outline" className="border-blue-600 text-blue-800 hover:bg-green-50 hover:border-green-600 dark:text-white tracking-tight dark:hover:text-black">
                   <Download className="mr-2 h-5 w-5" />
                   Download Detailed Syllabus
                 </Button>
@@ -84,9 +84,9 @@ export default function Home() {
         </section>
 
         {/* Course Details */}
-        <section id="course-details" className="py-16 bg-gray-50">
+        <section id="course-details" className="py-16 relative bg-gradient-to-b from-[#E8F5E9] to-white">
       <div className="container">
-        <h2 className="text-3xl font-bold text-center mb-12">Course Details</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 dark:text-green-500 tracking-tight">Course Details</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
           <Card className="p-6 text-center flex flex-col items-center">
@@ -135,20 +135,20 @@ export default function Home() {
         {/* Detailed Syllabus */}
         <section id="syllabus" className="py-16 bg-white">
           <div className="container">
-            <h2 className="text-3xl font-bold text-center mb-12">Detailed Syllabus</h2>
+            <h2 className="text-3xl font-bold text-center dark:text-green-600 tracking-tight mb-12">Detailed Syllabus</h2>
             <div className="max-w-4xl mx-auto">
               <Tabs defaultValue="admin" className="w-full">
                 <TabsList className="grid grid-cols-2 mb-8">
                   <TabsTrigger value="admin">Splunk Admin</TabsTrigger>
                   <TabsTrigger value="developer">Splunk Developer</TabsTrigger>
                 </TabsList>
-                <TabsContent value="admin" className="bg-white p-6 rounded-lg shadow-sm">
+                <TabsContent value="admin" className="bg-white p-6 rounded-lg shadow-sm dark:text-gray-800 tracking-tight">
                   <h3 className="text-xl font-bold mb-4">Splunk Admin (20 Hours)</h3>
                   <Accordion type="single" collapsible className="w-full">
                     <AccordionItem value="requirement-gathering">
                       <AccordionTrigger>Requirement gathering</AccordionTrigger>
                       <AccordionContent>
-                        <ul className="space-y-2 text-gray-600">
+                        <ul className="space-y-2 text-gray-600 dark:text-black tracking-tight">
                           <li>Identify data sources, log formats, and ingestion methods.</li>
                           <li>Define access controls, retention policies, and compliance needs.</li>
                           <li>Gather performance, scaling, and monitoring requirements.</li>
@@ -228,9 +228,9 @@ export default function Home() {
                     </AccordionItem>
                   </Accordion>
                 </TabsContent>
-                <TabsContent value="developer" className="bg-white p-6 rounded-lg shadow-sm">
+                <TabsContent value="developer" className="bg-white dark:text-gray-800 tracking-tight p-6 rounded-lg shadow-sm">
                   <h3 className="text-xl font-bold mb-4">Splunk Developer (20 Hours)</h3>
-                  <Accordion type="single" collapsible className="w-full">
+                  <Accordion type="single" collapsible className="w-full dark:text-gray-800 tracking-tight">
                     <AccordionItem value="field-extraction-from-data">
                       <AccordionTrigger>Field Extraction from data</AccordionTrigger>
                       <AccordionContent>
@@ -313,8 +313,8 @@ export default function Home() {
         {/* Target Audience */}
         <section className="py-16 bg-gray-50">
           <div className="container">
-            <h2 className="text-3xl font-bold text-center mb-12">Who is This Course For?</h2>
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-12 dark:text-green-600 tracking-tight">Who is This Course For?</h2>
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto dark:text-gray-800 tracking-tight">
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="managers">
                   <AccordionTrigger className="text-lg font-medium">Managers</AccordionTrigger>
@@ -381,10 +381,10 @@ export default function Home() {
         </section>
 
         {/* Contact & Enrollment */}
-        <section ref={coursesRef} id="contact" className="py-16 bg-white">
+        <section ref={coursesRef} id="contact" className="py-16 bg-white ">
           <div className="container">
-            <h2 className="text-3xl font-bold text-center mb-12">Enrollment Process</h2>
-            <div className="gap-4 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-12 dark:text-green-600 tracking-tight">Enrollment Process</h2>
+            <div className="gap-4 max-w-2xl mx-auto dark:text-gray-800 tracking-tight">
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
@@ -452,8 +452,8 @@ export default function Home() {
         {/* FAQ Section */}
         <section id="faq" className="py-16 bg-gray-50">
           <div className="container">
-            <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
-            <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-12 dark:text-green-600 tracking-tight">Frequently Asked Questions</h2>
+            <div className="max-w-3xl mx-auto dark:text-gray-800 tracking-tight">
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="right-one-for-me">
                   <AccordionTrigger>I feel this course may not be the right one for me, what do you say?</AccordionTrigger>

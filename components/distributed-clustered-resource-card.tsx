@@ -9,7 +9,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Separator } from "@/components/ui/separator"
 import type { ReactNode } from "react"
 
-interface ResourceCardProps {
+interface DisClusteredCardProps {
   icon: ReactNode
   title: string
   description: string
@@ -24,7 +24,7 @@ interface ResourceCardProps {
   }
 }
 
-export function ResourceCard({
+export function DisClusteredCard({
   icon,
   title,
   description,
@@ -33,7 +33,7 @@ export function ResourceCard({
   accessType,
   accessLink,
 
-}: ResourceCardProps) {
+}: DisClusteredCardProps) {
   const [isExpanded, setIsExpanded] = useState(false)
 
   return (
@@ -92,13 +92,12 @@ export function ResourceCard({
             }`}
           >
             <div className="border-t pt-4 space-y-4">
-              <p className="text-muted-foreground leading-relaxed">Free Splunk Standalone Lab Setup – <b>BOTSv3 Data</b> Included! <br></br><br />
-✅ Pre-configured Splunk Instance. <br />
-✅ BOTSv3 Security Dataset (Real-world logs for threat hunting). <br />
-✅ Supporting Add-ons for seamless data ingestion. <br />
-✅ Step-by-Step Guidance to help you get started.</p>
+              <p className="text-muted-foreground leading-relaxed">
+               <b> Search Head Cluster (SHC):</b> A group of 3 search heads that work together to distribute search queries and results, ensuring load balancing and failover.
 
-              <div className="pt-1">
+I               <b>Indexer Cluster: </b>A cluster of 3 indexers that store, replicate, and manage incoming data to provide redundancy and fault tolerance.</p>
+
+              <div className="pt-2">
                
                 <Button
                   className={`w-full ${

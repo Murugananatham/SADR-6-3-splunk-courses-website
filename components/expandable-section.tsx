@@ -8,10 +8,10 @@ import { ChevronDown, ChevronUp } from "lucide-react"
 interface ExpandableSectionProps {
   title: string
   initialContent: string
-  expandedContent: string
+
 }
 
-export function ExpandableSection({ title, initialContent, expandedContent }: ExpandableSectionProps) {
+export function ExpandableSection({ title, initialContent }: ExpandableSectionProps) {
   const [isExpanded, setIsExpanded] = useState(false)
 
   return (
@@ -26,7 +26,15 @@ export function ExpandableSection({ title, initialContent, expandedContent }: Ex
               isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
             }`}
           >
-            <p className="text-muted-foreground leading-relaxed pt-4">{expandedContent}</p>
+            <p className="text-muted-foreground leading-relaxed pt-4">
+             1. I learned all concepts in Splunk Admin, but don’t have real-time experience. <br />
+             2. I am unable to crack the interview, they are asking real-time questions. <br />
+             3. I need one dedicated trainer to guide me step by step. <br />
+             4. I took many courses in Splunk, but not able to understand properly. <br />
+             5. I want to be a real time expert in Splunk. <br />
+             6. I want to gain practical knowledge / real time experience. <br />
+             7. I want to learn how to implement end-to-end project in Splunk. <br />
+</p>
           </div>
 
           <Button

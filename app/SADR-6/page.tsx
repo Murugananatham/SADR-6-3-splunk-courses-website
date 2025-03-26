@@ -2,20 +2,16 @@
 
 import { useState, useRef, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { ChevronRight, Server, Code, Award, ChevronLeft } from "lucide-react"
+import { ChevronRight, Server, Code, ChevronLeft } from "lucide-react"
 import { ExpandableSection } from "@/components/expandable-section"
-import { LearningTrackCard } from "@/components/learning-track-card"
 import { ResourceCard } from "@/components/resource-card"
-import { CourseCard } from "@/components/course-card"
-import { CustomTrackForm } from "@/components/custom-track-form"
-import { SecondaryCoursesSection } from "@/components/secondary-courses-section"
-import { ProgressRoadmap } from "@/components/progress-roadmap"
-import { MindmapVisualization } from "@/components/mindmap-visualization"
-import { StickyNav } from "@/components/sticky-nav"
+import { CourseCard } from "@/components/admin-course-card"
 import { FAQSection } from "@/components/faq-section"
-import { ContactPopup } from "@/components/contact-popup"
 import { ThemeToggle } from "@/components/theme-toggle"
 import Link from "next/link"
+import { DevCourseCard } from "@/components/dev-course-card"
+import { NonClusteredCard } from "@/components/non-clustered-resource-card"
+import { DisClusteredCard } from "@/components/distributed-clustered-resource-card"
 
 export default function Home() {
   const heroRef = useRef<HTMLElement>(null)
@@ -245,7 +241,6 @@ export default function Home() {
           <ExpandableSection
             title="Why This Training?"
             initialContent="Our one-to-one training ensures hands-on learning, real-world scenarios, and direct mentorship."
-            expandedContent="Personalized mentorship, career-focused guidance, and structured learning paths tailored for individual success. Get expert mentorship, real-world use cases, and customized learning paths to suit your career goals. Learn efficiently with structured guidance. Our trainers have years of industry experience and will help you navigate complex scenarios you'll encounter in real-world environments."
           />
         </div>
       </section>
@@ -310,6 +305,7 @@ export default function Home() {
         ref={resourcesRef}
         className={`py-16 container px-4 md:px-6 transition-all duration-700 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
       >
+        {/* <SplunkServerSetup /> */}
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12 text-primary">Roadmap Helping Free & Paid Resources</h2>
 
@@ -318,52 +314,31 @@ export default function Home() {
               icon={<Server className="h-10 w-10 text-primary" />}
               title="Splunk Standalone Server Setup"
               description="Step-by-step guide to set up your own Splunk server environment for practice."
-              expandedContent="Free Splunk Standalone Lab Setup – BOTSv3 Data Included!
-
-              Get hands-on experience with Splunk by setting up your own Standalone Lab—completely free! This setup includes:
-              ✅ Pre-configured Splunk Instance
-              ✅ BOTSv3 Security Dataset (Real-world logs for threat hunting)
-              ✅ Supporting Add-ons for seamless data ingestion
-              ✅ Step-by-Step Guidance to help you get started"
               tag="Free"
               isPaid={false}
               accessType="form"
               accessLink="https://sales.softmania.in/bookings/splunk-standalone-lab-setup"
-              formFields={["Name", "Email", "Company", "Experience Level", "Primary Use Case"]}
             />
 
-            <ResourceCard
+            <NonClusteredCard
               icon={<Code className="h-10 w-10 text-primary" />}
               title="Splunk Distributed (Non-clustered) Environment Setup"
               description="Coming Soon..."
-              expandedContent="
-              Search head -1
-              Indexer -1
-              Heavy Forwarder -1
-              Universal Forwarder -1
-              "
               tag="Free"
               isPaid={false}
               accessType="form"
-              accessLink="https://forms.softmania.com/admin-commands"
-              formFields={["Name", "Email", "Current Role", "Splunk Experience"]}
+              accessLink="#"
             />
 
-            <ResourceCard
+            <DisClusteredCard
               icon={<Code className="h-10 w-10 text-[#FFD700]" />}
               title="Distributed Clustered Environment"
-              description="A Distributed Clustered Environment in Splunk enables scalability and high availability."
-              expandedContent="Search Head Cluster (SHC): A group of 3 search heads that work together to distribute search queries and results, ensuring load balancing and failover.
-
-Indexer Cluster: A cluster of 3 indexers that store, replicate, and manage incoming data to provide redundancy and fault tolerance."
+              description="coming soon..."
+              // description="A Distributed Clustered Environment in Splunk enables scalability and high availability."
               tag="Paid"
               isPaid={true}
               accessType="booking"
-              accessLink="https://calendly.com/softmania/splunk-query-mastery"
-              bookingDetails={{
-                duration: "60 minutes",
-                availability: "Mon-Fri, 9AM-6PM EST",
-              }}
+              accessLink="#"
             />
           </div>
         </div>
@@ -392,66 +367,32 @@ Indexer Cluster: A cluster of 3 indexers that store, replicate, and manage incom
                   ]}
                   detailedDescription="Our Splunk Admin Roadmap provides a comprehensive path to mastering Splunk administration. Starting with installation and basic configuration, you'll progress through user management, data onboarding, and advanced performance optimization techniques. Each session is tailored to your specific needs and environment."
                   expandedDetails="The course includes hands-on exercises, real-world scenarios, and best practices from experienced Splunk administrators. You'll learn how to troubleshoot common issues, implement security best practices, and optimize your Splunk deployment for performance and scalability. By the end of this roadmap, you'll have the skills and confidence to manage enterprise-level Splunk environments."
-                  duration="6-8 weeks"
+                  duration="5-6 Months"
                   audience={["IT Administrators", "DevOps Engineers", "System Administrators"]}
                   prerequisites={[
                     "Basic IT infrastructure knowledge",
                     "Familiarity with Linux/Windows server administration",
                     "Understanding of data concepts",
                   ]}
-                  certification={true}
-                  relatedCourses={[
-                    {
-                      title: "Splunk Cloud Administration",
-                      description: "Learn to manage and optimize Splunk Cloud deployments",
-                      link: "#splunk-cloud",
-                    },
-                    {
-                      title: "Splunk Security Essentials",
-                      description: "Security monitoring and threat detection with Splunk",
-                      link: "#splunk-security",
-                    },
-                    {
-                      title: "Enterprise Splunk Deployment",
-                      description: "Design and implement large-scale Splunk environments",
-                      link: "#enterprise-deployment",
-                    },
-                  ]}
+                  certification={false}
                 />
               </div>
 
               <div className="space-y-8">
-                <CourseCard
+                <DevCourseCard
                   title="Splunk Developer Roadmap"
                   description="Master Splunk development with personalized guidance on searches, dashboards, and apps."
                   features={["Advanced Search Queries", "Dashboard Creation", "App Development", "API Integration"]}
                   detailedDescription="The Splunk Developer Roadmap focuses on building your skills as a Splunk developer. You'll learn advanced search techniques, dashboard creation, custom visualization development, and app building. Our expert instructors will guide you through each step of the development process."
                   expandedDetails="This roadmap covers everything from SPL (Search Processing Language) mastery to creating production-ready Splunk apps. You'll learn how to leverage Splunk's REST API, create custom commands, and integrate with external systems. The course includes practical projects that you can add to your portfolio, demonstrating your ability to solve real business problems with Splunk."
-                  duration="8-10 weeks"
+                  duration="5-6 Months"
                   audience={["Software Developers", "Data Analysts", "IT Professionals"]}
                   prerequisites={[
                     "Basic programming knowledge",
                     "Understanding of web technologies (HTML, CSS, JavaScript)",
                     "Familiarity with Splunk basics",
                   ]}
-                  certification={true}
-                  relatedCourses={[
-                    {
-                      title: "Advanced SPL for Developers",
-                      description: "Master complex search processing language techniques",
-                      link: "#advanced-spl",
-                    },
-                    {
-                      title: "Splunk App Certification Prep",
-                      description: "Prepare your custom Splunk apps for certification",
-                      link: "#app-certification",
-                    },
-                    {
-                      title: "Splunk Dashboard Framework",
-                      description: "Build advanced dashboards with the latest framework",
-                      link: "#dashboard-framework",
-                    },
-                  ]}
+                  certification={false}
                 />
               </div>
             </div>

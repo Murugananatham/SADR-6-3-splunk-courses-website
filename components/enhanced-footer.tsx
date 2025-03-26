@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react"
+import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, Youtube } from "lucide-react"
 import Link from "next/link"
 
 export function EnhancedFooter() {
@@ -21,60 +21,27 @@ export function EnhancedFooter() {
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
+              <a href="https://www.linkedin.com/company/softmania-tech" className="text-gray-400 hover:text-white transition-colors duration-300">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
+              <a href="https://www.youtube.com/@SoftManiaTech" className="text-gray-400 hover:text-white transition-colors duration-300">
+                <Youtube className="h-5 w-5" />
+                <span className="sr-only">LinkedIn</span>
+              </a>
+              <a href="https://www.instagram.com/softmaniatech" target="_blank" className="text-gray-400 hover:text-white transition-colors duration-300">
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </a>
             </div>
           </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/" className="text-gray-400 hover:text-white transition-colors duration-300">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-gray-400 hover:text-white transition-colors duration-300">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/courses" className="text-gray-400 hover:text-white transition-colors duration-300">
-                  Courses
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-gray-400 hover:text-white transition-colors duration-300">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-gray-400 hover:text-white transition-colors duration-300">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-
           {/* Training Programs */}
           <div>
             <h3 className="text-white font-semibold text-lg mb-4">Training Programs</h3>
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/splunk-trainings/one-to-one-roadmap"
+                  href="/SADR-6"
                   className="text-gray-400 hover:text-white transition-colors duration-300"
                 >
                   One-to-One Training
@@ -82,15 +49,15 @@ export function EnhancedFooter() {
               </li>
               <li>
                 <Link
-                  href="/splunk-trainings/fast-track-roadmap"
+                  href="/SADR-3"
                   className="text-gray-400 hover:text-white transition-colors duration-300"
                 >
                   Fast-Track Program
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
-                  href="/splunk-trainings/certification"
+                  href="/"
                   className="text-gray-400 hover:text-white transition-colors duration-300"
                 >
                   Certification Courses
@@ -103,7 +70,7 @@ export function EnhancedFooter() {
                 >
                   Corporate Training
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -112,16 +79,25 @@ export function EnhancedFooter() {
             <h3 className="text-white font-semibold text-lg mb-4">Contact Us</h3>
             <ul className="space-y-4">
               <li className="flex items-start">
+              <Link href="mailto:info@softmania.in" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                 <Mail className="h-5 w-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-400">info@softmania.com</span>
+              </Link>
+              <Link href="mailto:info@softmania.in" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                <span className="text-gray-400">info@softmania.in</span>
+              </Link>
               </li>
+
               <li className="flex items-start">
+              <Link href="https://wa.me/918317349618" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                 <Phone className="h-5 w-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
+              </Link>
+              <Link href="https://wa.me/918317349618" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                <span className="text-gray-400">+91 8317349618</span>
+              </Link>
               </li>
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-400">123 Training Street, Tech City, 10001</span>
+                <span className="text-gray-400"> BommamPatty, Akkalampatti, Tamil Nadu 637212</span>
               </li>
             </ul>
           </div>
@@ -133,14 +109,14 @@ export function EnhancedFooter() {
             © {new Date().getFullYear()} SoftMania. All rights reserved.
           </p>
           <div className="flex space-x-6">
-            <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
+            <Link href="https://splunk.softmania.in/#/privacy-policy" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
-              Terms of Service
+            <Link href="https://splunk.softmania.in/#/terms-and-conditions" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
+            Terms & conditions
             </Link>
-            <Link href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
-              Cookie Policy
+            <Link href="https://splunk.softmania.in/#/refund-policy" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
+            Refund Policy
             </Link>
           </div>
         </div>

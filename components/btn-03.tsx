@@ -61,11 +61,11 @@ export default function Btn03({ className, particleCount = 12, attractRadius = 5
     <Button
       className={cn(
         "min-w-40 relative touch-none",
-        "bg-yellow-100 dark:bg-yellow-900",
-        "hover:bg-yellow-200 dark:hover:bg-yellow-800",
-        "text-black dark:text-black",
-        "border border-yellow-300 dark:border-yellow-700",
-        "transition-all duration-300",
+        "bg-yellow-100 dark:text-white tracking-tight dark:bg-yellow-900",
+        "hover:bg-yellow-200 dark:text-white tracking-tight dark:hover:bg-yellow-800",
+        "text-black dark:text-white tracking-tight dark:text-black",
+        "border dark:text-white tracking-tight border-yellow-300 dark:border-yellow-700",
+        "transition-all dark:text-white tracking-tight duration-300",
         className,
       )}
       onMouseEnter={handleInteractionStart}
