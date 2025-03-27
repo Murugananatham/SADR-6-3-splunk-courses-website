@@ -17,17 +17,13 @@ export function EnhancedFooter() {
             </div>
             <p className="text-gray-400 mb-6">Expert Splunk Training Solutions for professionals and organizations.</p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
-                <Facebook className="h-5 w-5" />
-                <span className="sr-only">Facebook</span>
-              </a>
-              <a href="https://www.linkedin.com/company/softmania-tech" className="text-gray-400 hover:text-white transition-colors duration-300">
+              <a href="https://www.linkedin.com/company/softmania-tech" target="_blank" className="text-gray-400 hover:text-white transition-colors duration-300">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </a>
-              <a href="https://www.youtube.com/@SoftManiaTech" className="text-gray-400 hover:text-white transition-colors duration-300">
+              <a href="https://www.youtube.com/@SoftManiaTech" target="_blank" className="text-gray-400 hover:text-white transition-colors duration-300">
                 <Youtube className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
+                <span className="sr-only">YouTube</span>
               </a>
               <a href="https://www.instagram.com/softmaniatech" target="_blank" className="text-gray-400 hover:text-white transition-colors duration-300">
                 <Instagram className="h-5 w-5" />
