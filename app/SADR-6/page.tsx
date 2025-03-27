@@ -12,6 +12,7 @@ import Link from "next/link"
 import { DevCourseCard } from "@/components/dev-course-card"
 import { NonClusteredCard } from "@/components/non-clustered-resource-card"
 import { DisClusteredCard } from "@/components/distributed-clustered-resource-card"
+import Salesiq from "@/components/salesiq"
 
 export default function Home() {
   const heroRef = useRef<HTMLElement>(null)
@@ -514,6 +515,7 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      <Salesiq />
       <div>
     </div>
     </div>

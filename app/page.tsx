@@ -11,6 +11,7 @@ import { EnhancedFooter } from "@/components/enhanced-footer"
 import { TrainingCard } from "@/components/training-card"
 import { motion, AnimatePresence } from "framer-motion"
 import Link from "next/link"
+import Salesiq from "@/components/salesiq"
 
 export default function Home() {
   const [expandedFaq, setExpandedFaq] = useState<string | null>(null)
@@ -1085,7 +1086,9 @@ export default function Home() {
           </motion.div>
         )}
       </AnimatePresence>
+      <Salesiq />
     </main>
+    
   )
 }
 
