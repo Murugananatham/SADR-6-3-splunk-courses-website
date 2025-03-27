@@ -23,7 +23,7 @@ export default function Home() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_calc(50%+var(--mouse-x,0)*30%)_calc(50%+var(--mouse-y,0)*30%),rgba(16,185,129,0.1)_0%,transparent_60%)] dark:bg-[radial-gradient(circle_at_calc(50%+var(--mouse-x,0)*30%)_calc(50%+var(--mouse-y,0)*30%),rgba(16,185,129,0.15)_0%,transparent_60%)] pointer-events-none"></div>
 
       {/* Header */}
-      <header className="border-b border-gray-200 dark:border-gray-700 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm sticky top-0 z-10 transition-colors duration-300">
+      <header className="fixed top-0 left-0 w-full dark:border-gray-700 dark:bg-gray-900/90 z-50 transition-colors duration-300">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
           <Link href="/">
@@ -35,11 +35,12 @@ export default function Home() {
           </div>
         </div>
       </header>
+      
 
 
       <main className="flex-1">    
         {/* Hero Section */}
-        <section id="#" className="relative bg-gradient-to-b from-[#E8F5E9] to-white py-16 md:py-18 py-16 pb-36">
+        <section id="#" className="relative bg-gradient-to-b from-[#E8F5E9] to-white py-20 md:py-28 md:pb-40">
 
           {/* Back to course */}
           <div className="container mx-auto px-1">

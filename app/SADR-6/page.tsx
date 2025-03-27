@@ -178,8 +178,8 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_calc(50%+var(--mouse-x,0)*30%)_calc(50%+var(--mouse-y,0)*30%),rgba(16,185,129,0.1)_0%,transparent_60%)] dark:bg-[radial-gradient(circle_at_calc(50%+var(--mouse-x,0)*30%)_calc(50%+var(--mouse-y,0)*30%),rgba(16,185,129,0.15)_0%,transparent_60%)] pointer-events-none"></div>
 
         {/* Header */}
-        <header className="border-b border-gray-200 dark:border-gray-700 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm sticky top-0 z-10 transition-colors duration-300">
-          <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+        <header className="fixed top-0 left-0 w-full dark:border-gray-700 dark:bg-gray-900/90 z-50 transition-colors duration-300">
+        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
             <div className="flex items-center gap-2">
               <Link href="/" className="hover:text-white transition-colors">
                 <h1 className="text-xl md:text-2xl font-bold text-gray-800 dark:text-white"><span className="text-green-600">Soft</span><span className="light:text-black"> Mania</span></h1>
@@ -195,7 +195,7 @@ export default function Home() {
       <section
         id="#"
         ref={heroRef}
-        className={`relative bg-gradient-to-b from-primary/10 to-background py-14 md:py-14 transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}
+        className={`relative bg-gradient-to-b from-primary/10 to-background py-14 md:py-20 transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}
       >
 
         {/* Back to course */}

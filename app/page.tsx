@@ -104,7 +104,7 @@ export default function Home() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_calc(50%+var(--mouse-x,0)*30%)_calc(50%+var(--mouse-y,0)*30%),rgba(16,185,129,0.1)_0%,transparent_60%)] dark:bg-[radial-gradient(circle_at_calc(50%+var(--mouse-x,0)*30%)_calc(50%+var(--mouse-y,0)*30%),rgba(16,185,129,0.15)_0%,transparent_60%)] pointer-events-none"></div>
 
       {/* Header */}
-      <header className="border-b border-gray-200 dark:border-gray-700 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm sticky top-0 z-10 transition-colors duration-300">
+      <header className="fixed top-0 left-0 w-full dark:border-gray-700 dark:bg-gray-900/90 z-50 transition-colors duration-300">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
           <Link href="/" className="hover:text-white transition-colors">
@@ -119,7 +119,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-10 md:py-16 text-center relative z-0">
+      <section className="container mx-auto px-4 py-10 md:py-32 text-center relative z-0">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -139,7 +139,7 @@ export default function Home() {
       </section>
 
       {/* Training Cards */}
-      <section className="container mx-auto px-4 py-6 mb-16 relative z-0">
+      <section className="container mx-auto px-4 mb-20 relative z-0">
         <div className="max-w-5xl mx-auto">
           <div className="grid gap-8 md:grid-cols-2">
             {/* Card 1: One-to-One Training */}
