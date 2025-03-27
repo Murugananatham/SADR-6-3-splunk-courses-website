@@ -196,7 +196,7 @@ export default function Home() {
       <section
         id="#"
         ref={heroRef}
-        className={`relative bg-gradient-to-b from-primary/10 to-background py-24 md:py-20 transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}
+        className={`relative bg-gradient-to-b from-primary/10 to-background py-24 md:py-38 transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}
       >
 
         {/* Back to course */}
@@ -212,7 +212,7 @@ export default function Home() {
             </div>
           </div>
 
-        <div className="container px-4 md:px-6">
+        <div className="container px-8 md:px-12">
           <div className="flex flex-col items-center text-center space-y-4">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-primary">
               One-to-One Training
@@ -304,7 +304,7 @@ export default function Home() {
       <section
         id="roadmap-resources"
         ref={resourcesRef}
-        className={`py-16 container px-4 md:px-6 transition-all duration-700 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+        className={`py-28 container px-4 md:px-6 transition-all duration-700 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
       >
         {/* <SplunkServerSetup /> */}
         <div className="max-w-6xl mx-auto">
