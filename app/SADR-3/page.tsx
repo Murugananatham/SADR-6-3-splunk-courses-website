@@ -27,7 +27,7 @@ export default function Home() {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
           <Link href="/">
-            <h1 className="text-xl md:text-2xl font-bold text-gray-800 dark:text-white"><span className="text-green-600">Soft</span><span className="light:text-black"> Mania</span></h1>
+            <h1 className="text-sm md:text-2xl font-bold text-gray-800 dark:text-white"><span className="text-green-600">Soft</span><span className="light:text-black"> Mania</span></h1>
           </Link>
           </div>
           <div className="flex items-center gap-3">
@@ -40,7 +40,7 @@ export default function Home() {
 
       <main className="flex-1">    
         {/* Hero Section */}
-        <section id="#" className="relative bg-gradient-to-b from-[#E8F5E9] to-white py-20 md:py-28 md:pb-40">
+        <section id="#" className="relative bg-gradient-to-b from-[#E8F5E9] to-white py-28 md:py-28 md:pb-40">
 
           {/* Back to course */}
           <div className="container mx-auto px-1">

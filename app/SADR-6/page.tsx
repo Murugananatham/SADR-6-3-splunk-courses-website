@@ -196,7 +196,7 @@ export default function Home() {
       <section
         id="#"
         ref={heroRef}
-        className={`relative bg-gradient-to-b from-primary/10 to-background py-14 md:py-20 transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}
+        className={`relative bg-gradient-to-b from-primary/10 to-background py-24 md:py-20 transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}
       >
 
         {/* Back to course */}
@@ -236,7 +236,7 @@ export default function Home() {
       <section
         id="why-this-training"
         ref={whyTrainingRef}
-        className={`py-16 container px-4 md:px-6 transition-all duration-700 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+        className={`py-8 container px-4 md:px-6 transition-all duration-700 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
       >
         <div className="max-w-3xl mx-auto">
           <ExpandableSection

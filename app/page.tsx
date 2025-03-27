@@ -120,7 +120,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-10 md:py-32 text-center relative z-0">
+      <section className="container mx-auto px-4 py-28 md:py-32 text-center relative z-0">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
