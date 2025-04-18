@@ -59,7 +59,7 @@ export default function Home() {
 
             <div className="inline-flex items-center bg-white px-4 py-2 rounded-full shadow-md">
               <Rocket className="h-4 w-4 text-green-700 mr-2" />
-              <span className="text-md font-medium text-yellow-700 dark:text-black tracking-tight">Batch starts from April 7</span>
+              <span className="text-md font-medium text-yellow-700 dark:text-black tracking-tight">Next batch June 27</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 mt-10 mb-14">
@@ -437,12 +437,12 @@ export default function Home() {
                       WhatsApp Group
                     </Button>
                   </a>
-                  <a href="https://www.softmania.in/splunk-training/index" target="_blank" rel="noopener noreferrer">
+                  {/* <a href="https://www.softmania.in/splunk-training/index" target="_blank" rel="noopener noreferrer">
                     <Button className="bg-green-700 hover:bg-green-800 rounded-full">
                       <CreditCard className="mr-2 h-4 w-4" />
                       Payment Link
                     </Button>
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>

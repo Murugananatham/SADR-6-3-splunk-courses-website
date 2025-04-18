@@ -90,7 +90,7 @@ export default function Btn03({ className, particleCount = 12, attractRadius = 5
       ))}
       <span className="relative w-full flex items-center justify-center gap-2">
         <Rocket className={cn("w-4 h-4 transition-transform duration-300 h-4 w-4 text-yellow-700 mr-2", isAttracting && "scale-110")} />
-        {isAttracting ? "Start entroll now..." : "Batch starts from April 7"}
+        {isAttracting ? "Next batch June 27" : "Next batch June 27"}
       </span>
     </Button>
   )

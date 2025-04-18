@@ -91,10 +91,11 @@ export function EnhancedFooter() {
                 <span className="text-gray-400">+91 8317349618</span>
               </Link>
               </li>
-              <li className="flex items-start">
+              
+              {/* <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
                 <span className="text-gray-400"> BommamPatty, Akkalampatti, Tamil Nadu 637212</span>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
