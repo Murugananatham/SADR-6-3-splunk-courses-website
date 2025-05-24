@@ -59,7 +59,7 @@ export default function Home() {
 
             <div className="inline-flex items-center bg-white px-4 py-2 rounded-full shadow-md">
               <Rocket className="h-4 w-4 text-green-700 mr-2" />
-              <span className="text-md font-medium text-yellow-700 dark:text-black tracking-tight">Next batch June 10</span>
+              <span className="text-md font-medium text-yellow-700 dark:text-black tracking-tight">Next batch July 07</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 mt-10 mb-14">
